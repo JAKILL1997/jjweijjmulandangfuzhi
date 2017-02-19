@@ -39,15 +39,6 @@
     [IFlySpeechUtility createUtility:initString];    //所有服务启动前，需要确保执行createUtility
     
     
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    [self.window makeKeyAndVisible];
-//    ViewController *vc = [[ViewController alloc] init];
-//    vc.title = @"测试";
-//    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
-//    self.window.rootViewController = navi;
-    
-    
-    
     ViewController *mainViewController = [[ViewController alloc] init];
     mainViewController.title = @"翻译测试";
     JKRootNavigationController *centerViewController = [[JKRootNavigationController alloc] initWithRootViewController:mainViewController];
