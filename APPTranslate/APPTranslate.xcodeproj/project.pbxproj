@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521598521E5BB8F400EE3AE4 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 521598511E5BB8F400EE3AE4 /* NSString+MD5.m */; };
 		52CB21FF1B070C6E00C8DC2E /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CB21FE1B070C6E00C8DC2E /* IATConfig.m */; };
 		52CB220A1B07156600C8DC2E /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 52CB22021B07156600C8DC2E /* ioapi.c */; };
 		52CB220B1B07156600C8DC2E /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 52CB22041B07156600C8DC2E /* mztools.c */; };
@@ -126,6 +127,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521598501E5BB8F400EE3AE4 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		521598511E5BB8F400EE3AE4 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		52CB21FD1B070C6E00C8DC2E /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
 		52CB21FE1B070C6E00C8DC2E /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
 		52CB22011B07156600C8DC2E /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Translate/minizip/crypt.h; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 			children = (
 				52CB22551B071EEF00C8DC2E /* TransLate.h */,
 				52CB22561B071EEF00C8DC2E /* TransLate.m */,
+				521598501E5BB8F400EE3AE4 /* NSString+MD5.h */,
+				521598511E5BB8F400EE3AE4 /* NSString+MD5.m */,
 			);
 			name = TRANSLATE;
 			sourceTree = "<group>";
@@ -816,9 +821,12 @@
 				TargetAttributes = {
 					52D4135D1B0377850091BA4F = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 99TB687GKR;
+						ProvisioningStyle = Automatic;
 					};
 					52D413791B0377850091BA4F = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 99TB687GKR;
 						TestTargetID = 52D4135D1B0377850091BA4F;
 					};
 				};
@@ -939,6 +947,7 @@
 				52D1BC541B05CF2700DBB8DE /* AFURLSessionManager.m in Sources */,
 				52CB22201B0715C300C8DC2E /* HttpRequest.m in Sources */,
 				52D1BC531B05CF2700DBB8DE /* AFURLResponseSerialization.m in Sources */,
+				521598521E5BB8F400EE3AE4 /* NSString+MD5.m in Sources */,
 				52D4136D1B0377850091BA4F /* ViewController.m in Sources */,
 				52CB22101B07157100C8DC2E /* SSZipArchive.m in Sources */,
 				52D1BC9A1B05CFD400DBB8DE /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1008,6 +1017,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1050,6 +1060,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1071,6 +1082,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 99TB687GKR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/APPTranslate/Translate",
@@ -1082,7 +1095,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/APPTranslate/OtherResources/VoiceLib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakill.1997;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1090,6 +1105,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 99TB687GKR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/APPTranslate/Translate",
@@ -1101,7 +1118,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/APPTranslate/OtherResources/VoiceLib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakill.1997;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1109,6 +1128,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 99TB687GKR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1128,6 +1148,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 99TB687GKR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
