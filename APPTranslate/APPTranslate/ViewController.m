@@ -74,8 +74,6 @@
     _listenSorce = [ListeDataSource sharedInstance];
     [_listenSorce dataAppendDic:[_listenSorce fixedSelfDic]];
     [_listenSorce dataAppendDic:[_listenSorce fixedOtherDic]];
-    [_listenSorce dataAppendDic:[_listenSorce fixedSelfDic]];
-    [_listenSorce dataAppendDic:[_listenSorce fixedOtherDic]];
     
     [self.tbView reloadData];
     [self tableViewScrollToBottom];

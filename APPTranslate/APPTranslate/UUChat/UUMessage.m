@@ -70,6 +70,9 @@
 {
     NSString *subString = [Str substringWithRange:NSMakeRange(0, 19)];
     NSDate *lastDate = [NSDate dateFromString:subString withFormat:@"yyyy-MM-dd HH:mm:ss"];
+    if (!lastDate) {
+        lastDate = [NSDate  date];
+    }
     
     NSString *dateStr;  //年月日
     NSString *period;   //时间段
