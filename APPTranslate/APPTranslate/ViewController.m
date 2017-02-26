@@ -62,7 +62,7 @@
 -(void)initTableView {
     _oldContentOffsetY = 0.0f;
     
-    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);//减去底下录音button
+    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 120);//减去底下录音button
     _tbView = [[UITableView alloc] initWithFrame:rect];
     [self.view addSubview: _tbView];
     _tbView.delegate = self;
@@ -135,51 +135,4 @@
 
 
 #pragma mark - tableview 滑动时的回调
--(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-
-    if (scrollView.contentOffset.y > _oldContentOffsetY) {
-        /**
-         向上滑动
-         ****/
-        [self holdViewRollDown];
-    }else {
-        /**
-         向下滑动
-         ****/
-        [self holdViewRollUP];
-    }
-}
-
-
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    _oldContentOffsetY = scrollView.contentOffset.y;
-}
-
-
-
--(void)holdViewRollUP {
-    if (_holdViewIsShow == YES) {
-        return;
-    }
-    _holdViewIsShow = YES;
-    CGRect rect = [UIScreen mainScreen].bounds;
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3];
-    _holdView.center = CGPointMake(rect.size.width / 2, rect.size.height - 120/2);
-    [UIView commitAnimations];
-    
-}
-
--(void)holdViewRollDown {
-    
-    if (_holdViewIsShow == NO) {
-        return;
-    }
-    _holdViewIsShow = NO;
-    CGRect rect = [UIScreen mainScreen].bounds;
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3];
-    _holdView.center = CGPointMake(rect.size.width / 2, rect.size.height + 120/2);
-    [UIView commitAnimations];
-}
 @end
