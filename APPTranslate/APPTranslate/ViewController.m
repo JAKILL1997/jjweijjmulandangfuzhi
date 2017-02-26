@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "JKAdManager.h"
 
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,UUMessageCellDelegate>
-
 
 
 @end
@@ -24,8 +24,10 @@
     [super viewDidLoad];
     [self initTableView];
     [self initRecordView];
-
 }
+
+
+
 
 
 -(void)didReceiveMemoryWarning {
@@ -131,6 +133,4 @@
     NSLog(@"content being clicked");
 }
 
-
-#pragma mark - tableview 滑动时的回调
 @end

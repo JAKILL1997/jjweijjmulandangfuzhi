@@ -18,6 +18,7 @@
 #import "ViewController.h"
 #import "PcmPlayer.h"
 #import "TTSConfig.h"
+#import "JKAdManager.h"
 
 
 #define VIEW_HEIGHT     120.0f
@@ -347,10 +348,19 @@
                                         toText:resultString
                                         isLeft:_isLeft];
         
+        UIViewController *vc = [JKStaticTools viewControllerOfView:self];
+        
         UITableView *tbView = ((ViewController *)[JKStaticTools viewControllerOfView:self]).tbView;
         [tbView reloadData];
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:listenDataInstance.cellMessageFrameArray.count-1 inSection:0];
         [tbView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        
+        
+        [[JKAdManager sharedInstance] integradeWithVc:vc];
+        [[JKAdManager sharedInstance] show];
+        
+        
+        
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [_ttsInstance normalInit];

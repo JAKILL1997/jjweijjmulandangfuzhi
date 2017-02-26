@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HttpRequest.h"
+#import "JKHttpRequest.h"
+
 
 @protocol TranslateDelegate <NSObject>
 

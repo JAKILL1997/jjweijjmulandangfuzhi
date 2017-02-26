@@ -7,6 +7,8 @@
 //
 
 #import "TransLate.h"
+#import "NSString+MD5.h"
+#import "JKHttpRequest.h"
 
 
 #pragma  mark  google翻译语种
@@ -46,9 +48,9 @@
     
     NSString* resultString;
     
-    HttpRequest *baiduRequest;//百度翻译的http请求
+    JKHttpRequest *baiduRequest;//百度翻译的http请求
     
-    HttpRequest *googleRequest;//google翻译的http请求
+    JKHttpRequest *googleRequest;//google翻译的http请求
 }
 @end
 
@@ -199,7 +201,7 @@
     NSString *urlEncodeString=[text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *requestString=[NSString stringWithFormat:@"http://brisk.eu.org/api/translate.php?from=%@&to=%@&text=%@",srcSpeech,toSpeech,urlEncodeString];
     
-    googleRequest=[[HttpRequest alloc]initWithUrl:requestString];
+    googleRequest=[[JKHttpRequest alloc]initWithUrl:requestString];
     
     googleRequest.delegate=self;
     
@@ -214,10 +216,10 @@
     if( text == nil || text.length == 0 ){
         NSLog(@"in %s,param error",__func__);
     }
-    NSString *urlEncodeString=[text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *requestString=[NSString stringWithFormat:@"http://openapi.baidu.com/public/2.0/bmt/translate?client_id=GWufVI30Qz4rGAwvaq2mMUiv&q=%@&from=%@&to=%@",urlEncodeString,srcSpeech,toSpeech];
+//    NSString *urlEncodeString=[text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *requestString = [self gemerateBDQeuryString:srcSpeech to:toSpeech text:text];;
     
-    baiduRequest=[[HttpRequest alloc]initWithUrl:requestString];
+    baiduRequest=[[JKHttpRequest alloc]initWithUrl:requestString];
     
     baiduRequest.delegate=self;
     
@@ -229,18 +231,18 @@
 
 #pragma  mark - http 回调接口
 
--(void)onDLProgress:(HttpRequest *)request progress:(int)progress
+-(void)onDLProgress:(JKHttpRequest *)request progress:(int)progress
 {
     
 }
 
--(void)onErrorWithMsg:(HttpRequest *)request msg:(NSError *)msg
+-(void)onErrorWithMsg:(JKHttpRequest *)request msg:(NSError *)msg
 {
     
 }
 
 
--(void)onResultWithData:(HttpRequest *)request data:(NSData *)data
+-(void)onResultWithData:(JKHttpRequest *)request data:(NSData *)data
 {
     if( request == googleRequest ){
        NSString*result= [self googleParseJsonData:data];//处理谷歌传回的数据
@@ -253,6 +255,30 @@
             [self.delegate onTranslateResult:result withError:nil];
         }
     }
+    
+}
+
+- (NSString *)gemerateBDQeuryString:(NSString *)from to:(NSString *)to text:(NSString *)text {
+    NSMutableString *muString = @"".mutableCopy;
+    [muString appendString:@"20170221000039543"];
+    NSString *queryText = text.length? text: @"无效值";
+    [muString appendString:queryText];
+    NSString *salt = [NSString stringWithFormat:@"%lld",(long long)[[NSDate date] timeIntervalSince1970]];
+    [muString appendString:salt];
+    [muString appendString:@"knh4ICs7shOS77FLhNpI"];
+    NSString *sign = [muString jk_md5];
+    
+
+    NSMutableString *finalString = @"".mutableCopy;
+    [finalString appendString:@"http://api.fanyi.baidu.com/api/trans/vip/translate?"];
+    [finalString appendString:[NSString stringWithFormat:@"q=%@", [queryText jk_urlEncode]]];
+    [finalString appendString:[NSString stringWithFormat:@"&from=%@",from]];
+    [finalString appendString:[NSString stringWithFormat:@"&to=%@",to]];
+    [finalString appendString:[NSString stringWithFormat:@"&appid=%@",@"20170221000039543"]];
+    [finalString appendString:[NSString stringWithFormat:@"&salt=%@",salt]];
+    [finalString appendString:[NSString stringWithFormat:@"&sign=%@",sign]];
+    NSLog(@"%@",finalString);
+    return finalString;
     
 }
 

@@ -8,16 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		521598521E5BB8F400EE3AE4 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 521598511E5BB8F400EE3AE4 /* NSString+MD5.m */; };
+		529118371E63320E0045F5E9 /* JKAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 529118361E63320E0045F5E9 /* JKAdManager.m */; };
+		5291183A1E63382F0045F5E9 /* JKHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 529118381E63382F0045F5E9 /* JKHttpRequest.m */; };
 		52CB21FF1B070C6E00C8DC2E /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CB21FE1B070C6E00C8DC2E /* IATConfig.m */; };
 		52CB220A1B07156600C8DC2E /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 52CB22021B07156600C8DC2E /* ioapi.c */; };
 		52CB220B1B07156600C8DC2E /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 52CB22041B07156600C8DC2E /* mztools.c */; };
 		52CB220C1B07156600C8DC2E /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 52CB22061B07156600C8DC2E /* unzip.c */; };
 		52CB220D1B07156600C8DC2E /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 52CB22081B07156600C8DC2E /* zip.c */; };
 		52CB22101B07157100C8DC2E /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CB220F1B07157100C8DC2E /* SSZipArchive.m */; };
-		52CB221F1B0715C300C8DC2E /* DownloadHtmlFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CB22171B0715C300C8DC2E /* DownloadHtmlFile.m */; };
-		52CB22201B0715C300C8DC2E /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CB221A1B0715C300C8DC2E /* HttpRequest.m */; };
-		52CB22211B0715C300C8DC2E /* IFlyZipData.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CB221C1B0715C300C8DC2E /* IFlyZipData.m */; };
-		52CB22221B0715C300C8DC2E /* LFCGzipUtillity.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CB221E1B0715C300C8DC2E /* LFCGzipUtillity.m */; };
 		52CB22351B0716CE00C8DC2E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CB222E1B0716CE00C8DC2E /* AddressBook.framework */; };
 		52CB22361B0716CE00C8DC2E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CB222F1B0716CE00C8DC2E /* AssetsLibrary.framework */; };
 		52CB22371B0716CE00C8DC2E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CB22301B0716CE00C8DC2E /* AudioToolbox.framework */; };
@@ -114,6 +112,7 @@
 		52F40F5E1B037B6000512215 /* voice_password_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F40F5C1B037B6000512215 /* voice_password_loading@2x.png */; };
 		52F40F5F1B037B6000512215 /* VoiceSearchLoading010@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F40F5D1B037B6000512215 /* VoiceSearchLoading010@2x.png */; };
 		52F40F621B037B8000512215 /* RecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F40F611B037B8000512215 /* RecordButton.m */; };
+		E816E8B91FED4F56A6348C66 /* libPods-APPTranslate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B09FF048047E731859CEF2F /* libPods-APPTranslate.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +126,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B09FF048047E731859CEF2F /* libPods-APPTranslate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APPTranslate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		521598501E5BB8F400EE3AE4 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		521598511E5BB8F400EE3AE4 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		529118351E63320E0045F5E9 /* JKAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKAdManager.h; sourceTree = "<group>"; };
+		529118361E63320E0045F5E9 /* JKAdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKAdManager.m; sourceTree = "<group>"; };
+		529118381E63382F0045F5E9 /* JKHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JKHttpRequest.m; path = Translate/httpwithZip/JKHttpRequest.m; sourceTree = "<group>"; };
+		529118391E63382F0045F5E9 /* JKHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JKHttpRequest.h; path = Translate/httpwithZip/JKHttpRequest.h; sourceTree = "<group>"; };
 		52CB21FD1B070C6E00C8DC2E /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
 		52CB21FE1B070C6E00C8DC2E /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
 		52CB22011B07156600C8DC2E /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Translate/minizip/crypt.h; sourceTree = "<group>"; };
@@ -142,15 +146,6 @@
 		52CB22091B07156600C8DC2E /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zip.h; path = Translate/minizip/zip.h; sourceTree = "<group>"; };
 		52CB220E1B07157100C8DC2E /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = Translate/SSZipArchive.h; sourceTree = "<group>"; };
 		52CB220F1B07157100C8DC2E /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = Translate/SSZipArchive.m; sourceTree = "<group>"; };
-		52CB22161B0715C300C8DC2E /* DownloadHtmlFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadHtmlFile.h; path = Translate/httpwithZip/DownloadHtmlFile.h; sourceTree = "<group>"; };
-		52CB22171B0715C300C8DC2E /* DownloadHtmlFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadHtmlFile.m; path = Translate/httpwithZip/DownloadHtmlFile.m; sourceTree = "<group>"; };
-		52CB22181B0715C300C8DC2E /* GloabelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GloabelData.h; path = Translate/httpwithZip/GloabelData.h; sourceTree = "<group>"; };
-		52CB22191B0715C300C8DC2E /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = Translate/httpwithZip/HttpRequest.h; sourceTree = "<group>"; };
-		52CB221A1B0715C300C8DC2E /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = Translate/httpwithZip/HttpRequest.m; sourceTree = "<group>"; };
-		52CB221B1B0715C300C8DC2E /* IFlyZipData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFlyZipData.h; path = Translate/httpwithZip/IFlyZipData.h; sourceTree = "<group>"; };
-		52CB221C1B0715C300C8DC2E /* IFlyZipData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFlyZipData.m; path = Translate/httpwithZip/IFlyZipData.m; sourceTree = "<group>"; };
-		52CB221D1B0715C300C8DC2E /* LFCGzipUtillity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFCGzipUtillity.h; path = Translate/httpwithZip/LFCGzipUtillity.h; sourceTree = "<group>"; };
-		52CB221E1B0715C300C8DC2E /* LFCGzipUtillity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFCGzipUtillity.m; path = Translate/httpwithZip/LFCGzipUtillity.m; sourceTree = "<group>"; };
 		52CB222E1B0716CE00C8DC2E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		52CB222F1B0716CE00C8DC2E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		52CB22301B0716CE00C8DC2E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -310,6 +305,8 @@
 		52F40F5D1B037B6000512215 /* VoiceSearchLoading010@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VoiceSearchLoading010@2x.png"; path = "img/VoiceSearchLoading010@2x.png"; sourceTree = "<group>"; };
 		52F40F601B037B8000512215 /* RecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordButton.h; sourceTree = "<group>"; };
 		52F40F611B037B8000512215 /* RecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordButton.m; sourceTree = "<group>"; };
+		7010CC46974E26BBDD2F6A72 /* Pods-APPTranslate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPTranslate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APPTranslate/Pods-APPTranslate.debug.xcconfig"; sourceTree = "<group>"; };
+		8499E443476FC64F36A2344E /* Pods-APPTranslate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPTranslate.release.xcconfig"; path = "Pods/Target Support Files/Pods-APPTranslate/Pods-APPTranslate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +327,7 @@
 				52CB223A1B0716CE00C8DC2E /* AVKit.framework in Frameworks */,
 				52CB223B1B0716CE00C8DC2E /* CFNetwork.framework in Frameworks */,
 				52D1BC331B05CEE400DBB8DE /* libmp3lame.a in Frameworks */,
+				E816E8B91FED4F56A6348C66 /* libPods-APPTranslate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +341,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22F298D622CA04F57BA24414 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B09FF048047E731859CEF2F /* libPods-APPTranslate.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52CB21FC1B07097900C8DC2E /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,28 +379,14 @@
 		52CB22111B07158900C8DC2E /* TRANSLATE */ = {
 			isa = PBXGroup;
 			children = (
+				529118381E63382F0045F5E9 /* JKHttpRequest.m */,
+				529118391E63382F0045F5E9 /* JKHttpRequest.h */,
 				52CB22551B071EEF00C8DC2E /* TransLate.h */,
 				52CB22561B071EEF00C8DC2E /* TransLate.m */,
 				521598501E5BB8F400EE3AE4 /* NSString+MD5.h */,
 				521598511E5BB8F400EE3AE4 /* NSString+MD5.m */,
 			);
 			name = TRANSLATE;
-			sourceTree = "<group>";
-		};
-		52CB22151B0715B500C8DC2E /* HTTPWITHZIP */ = {
-			isa = PBXGroup;
-			children = (
-				52CB22161B0715C300C8DC2E /* DownloadHtmlFile.h */,
-				52CB22171B0715C300C8DC2E /* DownloadHtmlFile.m */,
-				52CB22181B0715C300C8DC2E /* GloabelData.h */,
-				52CB22191B0715C300C8DC2E /* HttpRequest.h */,
-				52CB221A1B0715C300C8DC2E /* HttpRequest.m */,
-				52CB221B1B0715C300C8DC2E /* IFlyZipData.h */,
-				52CB221C1B0715C300C8DC2E /* IFlyZipData.m */,
-				52CB221D1B0715C300C8DC2E /* LFCGzipUtillity.h */,
-				52CB221E1B0715C300C8DC2E /* LFCGzipUtillity.m */,
-			);
-			name = HTTPWITHZIP;
 			sourceTree = "<group>";
 		};
 		52CB22231B0715D500C8DC2E /* FRAMEWORK */ = {
@@ -524,7 +516,6 @@
 			children = (
 				52CB22691B0774B500C8DC2E /* MMDrawController */,
 				52CB225D1B07612300C8DC2E /* AudioPlayer */,
-				52CB22151B0715B500C8DC2E /* HTTPWITHZIP */,
 				52CB22001B07155100C8DC2E /* MINZIP */,
 				52D1BC881B05CFC100DBB8DE /* UKIT+AFNETWORKING */,
 				52D1BC651B05CF6D00DBB8DE /* NSDate+UTILS */,
@@ -682,6 +673,8 @@
 				52D413601B0377850091BA4F /* APPTranslate */,
 				52D4137D1B0377850091BA4F /* APPTranslateTests */,
 				52D4135F1B0377850091BA4F /* Products */,
+				E9909C23341AF840E5CC6F12 /* Pods */,
+				22F298D622CA04F57BA24414 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -768,8 +761,19 @@
 				52F40F611B037B8000512215 /* RecordButton.m */,
 				52D1BC0B1B05846700DBB8DE /* ButtonHoldView.h */,
 				52D1BC0C1B05846700DBB8DE /* ButtonHoldView.m */,
+				529118351E63320E0045F5E9 /* JKAdManager.h */,
+				529118361E63320E0045F5E9 /* JKAdManager.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		E9909C23341AF840E5CC6F12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7010CC46974E26BBDD2F6A72 /* Pods-APPTranslate.debug.xcconfig */,
+				8499E443476FC64F36A2344E /* Pods-APPTranslate.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -779,9 +783,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52D413841B0377850091BA4F /* Build configuration list for PBXNativeTarget "APPTranslate" */;
 			buildPhases = (
+				B1AC75CD637A5AD1CA078513 /* [CP] Check Pods Manifest.lock */,
 				52D4135A1B0377850091BA4F /* Sources */,
 				52D4135B1B0377850091BA4F /* Frameworks */,
 				52D4135C1B0377850091BA4F /* Resources */,
+				7434ED8CE5612FC73BDC2867 /* [CP] Embed Pods Frameworks */,
+				FB99BAB8B3ECFB4C2E8BE7D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -894,6 +901,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7434ED8CE5612FC73BDC2867 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APPTranslate/Pods-APPTranslate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1AC75CD637A5AD1CA078513 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FB99BAB8B3ECFB4C2E8BE7D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APPTranslate/Pods-APPTranslate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52D4135A1B0377850091BA4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -919,7 +974,6 @@
 				52D1BC9C1B05CFD400DBB8DE /* UIAlertView+AFNetworking.m in Sources */,
 				52D1BCA11B05CFD400DBB8DE /* UIWebView+AFNetworking.m in Sources */,
 				52D1BC091B049FB700DBB8DE /* UIColor+HEX.m in Sources */,
-				52CB221F1B0715C300C8DC2E /* DownloadHtmlFile.m in Sources */,
 				52CB22601B07618D00C8DC2E /* PcmPlayer.m in Sources */,
 				52D1BC9E1B05CFD400DBB8DE /* UIImageView+AFNetworking.m in Sources */,
 				52D1BCDE1B062A5000DBB8DE /* ListeDataSource.m in Sources */,
@@ -932,7 +986,6 @@
 				52CB22641B076A0700C8DC2E /* TTSObject.m in Sources */,
 				52D1BC0D1B05846700DBB8DE /* ButtonHoldView.m in Sources */,
 				52D1BC2C1B05CEA300DBB8DE /* UUMessageContentButton.m in Sources */,
-				52CB22211B0715C300C8DC2E /* IFlyZipData.m in Sources */,
 				52CB22B01B0782E100C8DC2E /* SAMath.m in Sources */,
 				52D1BC4E1B05CF2700DBB8DE /* AFHTTPSessionManager.m in Sources */,
 				52D1BC341B05CEE400DBB8DE /* Mp3Recorder.m in Sources */,
@@ -941,20 +994,20 @@
 				52D1BC511B05CF2700DBB8DE /* AFURLConnectionOperation.m in Sources */,
 				52CB22791B07751000C8DC2E /* JKRootNavigationController.m in Sources */,
 				52CB22A71B07813F00C8DC2E /* IATConfigViewController.m in Sources */,
+				529118371E63320E0045F5E9 /* JKAdManager.m in Sources */,
 				52D1BC521B05CF2700DBB8DE /* AFURLRequestSerialization.m in Sources */,
 				52CB22511B07183900C8DC2E /* IATObject.m in Sources */,
 				52CB22761B0774C200C8DC2E /* UIViewController+MMDrawerController.m in Sources */,
 				52D1BC541B05CF2700DBB8DE /* AFURLSessionManager.m in Sources */,
-				52CB22201B0715C300C8DC2E /* HttpRequest.m in Sources */,
 				52D1BC531B05CF2700DBB8DE /* AFURLResponseSerialization.m in Sources */,
 				521598521E5BB8F400EE3AE4 /* NSString+MD5.m in Sources */,
 				52D4136D1B0377850091BA4F /* ViewController.m in Sources */,
 				52CB22101B07157100C8DC2E /* SSZipArchive.m in Sources */,
+				5291183A1E63382F0045F5E9 /* JKHttpRequest.m in Sources */,
 				52D1BC9A1B05CFD400DBB8DE /* AFNetworkActivityIndicatorManager.m in Sources */,
 				52D1BC261B05CEA300DBB8DE /* ChatModel.m in Sources */,
 				52CB21FF1B070C6E00C8DC2E /* IATConfig.m in Sources */,
 				52CB220A1B07156600C8DC2E /* ioapi.c in Sources */,
-				52CB22221B0715C300C8DC2E /* LFCGzipUtillity.m in Sources */,
 				52D1BC111B058E1900DBB8DE /* AKPickerView.m in Sources */,
 				52CB22731B0774C200C8DC2E /* MMDrawerBarButtonItem.m in Sources */,
 				52CB220C1B07156600C8DC2E /* unzip.c in Sources */,
@@ -1080,6 +1133,7 @@
 		};
 		52D413851B0377850091BA4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7010CC46974E26BBDD2F6A72 /* Pods-APPTranslate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1103,6 +1157,7 @@
 		};
 		52D413861B0377850091BA4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8499E443476FC64F36A2344E /* Pods-APPTranslate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
