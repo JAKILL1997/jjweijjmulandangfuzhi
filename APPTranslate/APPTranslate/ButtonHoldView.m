@@ -180,10 +180,6 @@
     
     if (_speechState == SpeechNotStart) {
         self.isLeft = NO;
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.03f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-////            [self playStartSpeeking];
-//        });
-
         [_recognizerString setString:@""]; //首先将识别数据清空
         [IATConfig sharedInstance].isLeftBtn = NO;
         [_iatInstance normalInit];

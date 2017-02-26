@@ -43,7 +43,7 @@
 }
 
 -(void)initDataSoruce {
-    _itemArray = @[@"播放设置",@"识别设置",@"关于我们"];
+    _itemArray = @[@"播放设置"];
     
 }
 
