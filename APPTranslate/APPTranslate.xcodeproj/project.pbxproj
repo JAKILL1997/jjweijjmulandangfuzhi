@@ -109,6 +109,8 @@
 		52D413721B0377850091BA4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D413711B0377850091BA4F /* Images.xcassets */; };
 		52D413751B0377850091BA4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D413731B0377850091BA4F /* LaunchScreen.xib */; };
 		52D413811B0377850091BA4F /* APPTranslateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D413801B0377850091BA4F /* APPTranslateTests.m */; };
+		52EC59691EACEA3B006DC764 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EC59671EACEA3B006DC764 /* Contacts.framework */; };
+		52EC596A1EACEA3B006DC764 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EC59681EACEA3B006DC764 /* ContactsUI.framework */; };
 		52F40F5E1B037B6000512215 /* voice_password_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F40F5C1B037B6000512215 /* voice_password_loading@2x.png */; };
 		52F40F5F1B037B6000512215 /* VoiceSearchLoading010@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F40F5D1B037B6000512215 /* VoiceSearchLoading010@2x.png */; };
 		52F40F621B037B8000512215 /* RecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F40F611B037B8000512215 /* RecordButton.m */; };
@@ -301,6 +303,8 @@
 		52D4137A1B0377850091BA4F /* APPTranslateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APPTranslateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D4137F1B0377850091BA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D413801B0377850091BA4F /* APPTranslateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPTranslateTests.m; sourceTree = "<group>"; };
+		52EC59671EACEA3B006DC764 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		52EC59681EACEA3B006DC764 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		52F40F5C1B037B6000512215 /* voice_password_loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "voice_password_loading@2x.png"; path = "img/voice_password_loading@2x.png"; sourceTree = "<group>"; };
 		52F40F5D1B037B6000512215 /* VoiceSearchLoading010@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VoiceSearchLoading010@2x.png"; path = "img/VoiceSearchLoading010@2x.png"; sourceTree = "<group>"; };
 		52F40F601B037B8000512215 /* RecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordButton.h; sourceTree = "<group>"; };
@@ -314,6 +318,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EC59691EACEA3B006DC764 /* Contacts.framework in Frameworks */,
+				52EC596A1EACEA3B006DC764 /* ContactsUI.framework in Frameworks */,
 				52CB224C1B0717C300C8DC2E /* QuartzCore.framework in Frameworks */,
 				52CB224A1B07179E00C8DC2E /* libz.dylib in Frameworks */,
 				52CB22481B07179500C8DC2E /* UIKit.framework in Frameworks */,
@@ -344,6 +350,8 @@
 		22F298D622CA04F57BA24414 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52EC59671EACEA3B006DC764 /* Contacts.framework */,
+				52EC59681EACEA3B006DC764 /* ContactsUI.framework */,
 				3B09FF048047E731859CEF2F /* libPods-APPTranslate.a */,
 			);
 			name = Frameworks;

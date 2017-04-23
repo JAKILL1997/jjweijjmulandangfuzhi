@@ -21,6 +21,7 @@
 @implementation JKAdManager
 
 + (id)sharedInstance {
+    return nil;
     static JKAdManager *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -41,6 +42,7 @@
 }
 
 - (void)show {
+    /*
     [self createAndLoadInterstitial];
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -51,6 +53,7 @@
             [self show];
         }
     });
+     */
 }
 
 - (GADInterstitial *)createAndLoadInterstitial {
