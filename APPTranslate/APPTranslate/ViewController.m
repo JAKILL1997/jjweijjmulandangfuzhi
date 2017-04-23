@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "JKAdManager.h"
+#import "JKMenuViewController.h"
+#import "TTSConfigViewController.h"
 
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,UUMessageCellDelegate>
@@ -22,12 +24,31 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"语译";
+    [self setRightButtonItem];
     [self initTableView];
     [self initRecordView];
 }
 
 
 
+
+- (void)setRightButtonItem {
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [button addTarget:self action:@selector(rightBarBtnHandler) forControlEvents:UIControlEventTouchUpInside];
+    [button setImage:[UIImage imageNamed:@"ic_mine_setting"] forState:UIControlStateNormal];
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    
+    self.navigationItem.rightBarButtonItem = rightBtn;
+    //self.navigationController.navigationItem.rightBarButtonItem = rightBtn;
+}
+
+- (void)rightBarBtnHandler {
+    TTSConfigViewController *vc = [[TTSConfigViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self.navigationController presentViewController:navi animated:YES completion:nil];
+}
 
 
 -(void)didReceiveMemoryWarning {

@@ -18,20 +18,37 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
     [self initMultiSelector];
     [self initVcnPikerView];
     [self initLabel];
-    
-    
-    
     [self needUpdateView];
-    // Do any additional setup after loading the view.
+    [self setRightButtonItem];
+    self.view.backgroundColor = [UIColor blackColor];
+    self.title = @"语音设置";
 }
 
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setRightButtonItem {
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 30)];
+    [button setTitle:@"完成" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(rightBarBtnHandler) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    
+    self.navigationItem.rightBarButtonItem = rightBtn;
+    //self.navigationController.navigationItem.rightBarButtonItem = rightBtn;
+}
+
+- (void)rightBarBtnHandler {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 
 

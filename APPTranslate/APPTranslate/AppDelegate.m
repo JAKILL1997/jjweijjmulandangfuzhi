@@ -21,7 +21,7 @@
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) MMDrawerController *drawerController;
+//@property (nonatomic, strong) MMDrawerController *drawerController;
 @end
 
 @implementation AppDelegate
@@ -29,6 +29,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    ViewController *mainViewController = [[ViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    self.window.rootViewController = navi;
+    
+    
     [IFlySetting setLogFile:LVL_ALL];   //设置log等级，此处log为默认在app沙盒目录下的msc.log文件
     [IFlySetting showLogcat:YES];   //输出在console的log开关
     
@@ -38,27 +45,6 @@
     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@,timeout=%@",APPID_VALUE,TIMEOUT_VALUE];    //创建语音配置,appid必须要传入，仅执行一次则可
     [IFlySpeechUtility createUtility:initString];    //所有服务启动前，需要确保执行createUtility
     
-    
-    ViewController *mainViewController = [[ViewController alloc] init];
-    mainViewController.title = @"翻译测试";
-    JKRootNavigationController *centerViewController = [[JKRootNavigationController alloc] initWithRootViewController:mainViewController];
-    
-     JKMenuViewController *leftViewController = [[JKMenuViewController alloc] init];
-    
-    self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:centerViewController leftDrawerViewController:leftViewController];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"resource/menu_bg.png"]];
-    [self.drawerController.view addSubview:imageView];
-    [self.drawerController.view sendSubviewToBack:imageView];
-    
-    [self.drawerController setShowsShadow:NO];
-    [self.drawerController setMaximumLeftDrawerWidth:200];
-    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeBezelPanningCenterView];
-    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
-    [self.drawerController setNeedsStatusBarAppearanceUpdate];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.drawerController;
-    [self.window makeKeyAndVisible];
     
     return YES;
 }
