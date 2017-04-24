@@ -17,14 +17,14 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    //self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
     [self initMultiSelector];
     [self initVcnPikerView];
     [self initLabel];
     [self needUpdateView];
     [self setRightButtonItem];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"语音设置";
 }
 
@@ -115,7 +115,7 @@
     [self.view addSubview:_volumeLabel];
     
     _volumeValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, 345 + 64, 106, 21)];
-    _volumeValueLabel.textColor = [UIColor whiteColor];
+    _volumeValueLabel.textColor = [UIColor blackColor];
     _volumeValueLabel.textAlignment = NSTextAlignmentCenter;
     _volumeValueLabel.text = @"50";
     [self.view addSubview: _volumeValueLabel];
@@ -128,7 +128,7 @@
     
     
     _speedValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(rect.size.width/2 - 106.0f/2 , 345+ 64, 106, 21)];
-    _speedValueLabel.textColor = [UIColor whiteColor];
+    _speedValueLabel.textColor = [UIColor blackColor];
     _speedValueLabel.textAlignment = NSTextAlignmentCenter;
     _speedValueLabel.text = @"50";
     [self.view addSubview:_speedValueLabel];
@@ -140,7 +140,7 @@
     [self.view addSubview:_pitchLabel];
     
     _pitchValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(rect.size.width - 8 - 106 , 345+ 64, 106, 21)];
-    _pitchValueLabel.textColor = [UIColor whiteColor];
+    _pitchValueLabel.textColor = [UIColor blackColor];
     _pitchValueLabel.textAlignment = NSTextAlignmentCenter;
     _pitchValueLabel.text = @"50";
     [self.view addSubview:_pitchValueLabel];
@@ -157,7 +157,7 @@
     _vcnPicker.dataSource = self;
     _vcnPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    _vcnPicker.textColor = [UIColor whiteColor];
+    _vcnPicker.textColor = [UIColor blackColor];
     _vcnPicker.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
     _vcnPicker.highlightedFont = [UIFont fontWithName:@"HelveticaNeue" size:17];
     _vcnPicker.highlightedTextColor = [UIColor colorWithRed:0.0 green:168.0/255.0 blue:255.0/255.0 alpha:1.0];
